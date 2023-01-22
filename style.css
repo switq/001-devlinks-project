@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(assets/bg-background-dark-1080x1920.jpg);
+  --stroke-color: #ffffff80;
+  --surface-color: #ffffff1a;
+  --surface-color-hover: #ffffff40;
+  --switch-bg-url: url("assets/moon-stars.svg");
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(assets/bg-background-light-1080x1920.jpg);
+  --stroke-color: #00000080;
+  --surface-color: #0000001a;
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --switch-bg-url: url("assets/sun.svg");
+}
+
+body {
+  /* background-image: url(assets/bg-mobile\ -\ 1080x1920.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; */
+
+  /* background: color image repeat position/size */
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+#container {
+  text-align: center;
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* Profile  */
+
+/* 
+Displays:
+-block: a margem do elemento ocupa toda extensão horizontal a tela ou div;
+-in-line: a box do elemnto ocupa somente o tamanho do elemento
+*/
+
+/* Elementos block não são alterados pela propriedade 'text-align: center;, pois essa propriedade alinha a box inteira do elemento à tela ou div' */
+
+#profile {
+  padding: 24px;
+}
+
+/* Elementos in-line não são alterados pela propriedade 'margin: auto;', isso porque essa propriedade alinha o elemento ao meio da margem total disponivel */
+
+#profile img {
+  width: 112px;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#profile img:hover {
+  width: 142px;
+}
+
+#profile p {
+  font-weight: 500px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* switch */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center/16px;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slide-back 0.2s;
+  transition: outline 0.3s;
+}
+
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--surface-color-hover);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* Links */
+
+#links {
+  padding: 24px 0px;
+}
+
+#links ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#links ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  /* Muito bonitinho esse efeito */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.3s;
+}
+
+/* pseudo-selector */
+#links ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* Social Links */
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+
+  transition: background 0.3s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--surface-color-hover);
+}
+
+#social-links ion-icon {
+  font-size: 24px;
+}
+
+/* Footer */
+
+footer {
+  padding: 24px 0;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+footer a:hover {
+  background: var(--surface-color-hover);
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(assets/Desktop-dark-1920x1080.jpg);
+  }
+
+  .light {
+    --bg-url: url(assets/Desktop-light-1920x1080.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}

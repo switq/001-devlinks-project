@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Importanto fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Configurações da página -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto</title>
+
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img
+          src="assets/profile-800x800.png"
+          alt="Desenho de Guilherme com mascara e fundo azul e rosa"
+        />
+        <p>@swit.gui</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <div id="links">
+        <ul>
+          <li>
+            <a href="https://ionic.io/ionicons" target="_blank">Ionicons</a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=cp4kWvgrNUQ"
+              target="_blank"
+              >Link legal</a
+            >
+          </li>
+          <li>
+            <a href="https://youtu.be/3evRMbbA6IU?t=16" target="_blank"
+              >Link meio bosta</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              >Link muito louco</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="social-links">
+        <a href="https://github.com/switq" target="_blank"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+        <a href="https://www.instagram.com/swit.gui/" target="_blank"
+          ><ion-icon name="logo-instagram"></ion-icon
+        ></a>
+        <a href="https://www.youtube.com/@switgui" target="_blank"
+          ><ion-icon name="logo-youtube"></ion-icon
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/guilherme-rodrigues-605633208/"
+          target="_blank"
+          ><ion-icon name="logo-linkedin"></ion-icon
+        ></a>
+      </div>
+
+      <footer>
+        <p>
+          Feito com <ion-icon name="heart"></ion-icon> por mim e o
+          direcionamento do professor
+          <a href="https://app.rocketseat.com.br/me/maykbrito" target="_blank"
+            >Mayk Brito</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
